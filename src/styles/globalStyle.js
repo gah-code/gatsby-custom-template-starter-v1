@@ -120,9 +120,10 @@ select {
         }
     }
     h1 {
-        font-weight: 700;
-        font-size: 2rem;
+        font-weight: 800;
+        font-size: 2.2rem;
         line-height: 2.375rem;
+        margin-bottom: 3rem;
         color: ${({ theme }) => theme.colors.primary};
         @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
             font-size: 2.625rem;
