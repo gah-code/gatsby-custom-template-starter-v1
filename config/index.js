@@ -58,22 +58,15 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/gilbert-haro-2b108222b/',
     },
-    {
-      name: 'Medium',
-      url: '',
-    },
+
     {
       name: 'Github',
       url: 'https://github.com/gah-code',
     },
     {
-      name: 'Behance',
-      url: '',
+      name: 'Mail',
+      url: 'mailto:mail@konstantin.digital',
     },
-    // {
-    //   name: "Mail",
-    //   url: "mailto:mail@konstantin.digital",
-    // },
   ],
 
   //-- NAVIGATION SETTINGS -----

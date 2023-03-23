@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import ContentWrapper from '../../styles/contentWrapper';
+import { motion } from 'framer-motion';
 
+import Context from '../../context/';
 import Underlining from '../../styles/underlining';
+import Social from '../social';
 
 const StyledSection = styled.section`
   width: 100%;
@@ -53,22 +56,48 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `;
 
-const Hero = ({ content }) => {
+// const AnimatedUnderlining = motion.custom(Underlining);
+
+const Hero = () => {
+  const HeroItems = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 2,
+        staggerChildren: 0.3,
+        type: 'tween',
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, x: -150 },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
-    <StyledSection id='hero'>
-      <StyledContentWrapper>
-        <h1 className='title'>
-          Hello
-          <div className='greetings'>I'm Gilbert Haro</div>
-        </h1>
-        <h2 className='subtitle'>sub title</h2>
-        <div className='description'>body</div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe,
-          officiis.
-        </p>
-      </StyledContentWrapper>
-    </StyledSection>
+    <motion.div initial='hidden' animate='visible' variants={HeroItems}>
+      <StyledSection id='hero'>
+        <StyledContentWrapper>
+          <h1 className='title'>
+            Hello
+            <div className='greetings'>I'm Gilbert Haro</div>
+          </h1>
+          <h2 className='subtitle'>sub title</h2>
+          <div className='description'>body</div>
+          <p>Lorem</p>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Social fontSize='.95rem' padding='.3rem 1.25rem' width='auto' />
+          </motion.div>
+        </StyledContentWrapper>
+      </StyledSection>
+    </motion.div>
   );
 };
 
