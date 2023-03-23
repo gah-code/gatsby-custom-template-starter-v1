@@ -51,6 +51,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
     }
     .description {
       font-size: 1.125rem;
+      margin-top: 1rem;
       margin-bottom: 2rem;
     }
   }
@@ -58,13 +59,13 @@ const StyledContentWrapper = styled(ContentWrapper)`
 
 // const AnimatedUnderlining = motion.custom(Underlining);
 
-const Hero = () => {
+const Hero = ({ content }) => {
   const HeroItems = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 2,
+        delayChildren: 1,
         staggerChildren: 0.3,
         type: 'tween',
       },
@@ -76,16 +77,23 @@ const Hero = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <motion.div initial='hidden' animate='visible' variants={HeroItems}>
-      <StyledSection id='hero'>
-        <StyledContentWrapper>
+    <StyledSection id='hero'>
+      <StyledContentWrapper>
+        <motion.div
+          initial='hidden'
+          animate='visible'
+          variants={HeroItems}
+          style={{ width: '100%' }}
+        >
           <h1 className='title'>
             Hello
             <div className='greetings'>I'm Gilbert Haro</div>
           </h1>
           <h2 className='subtitle'>sub title</h2>
-          <div className='description'>body</div>
-          <p>Lorem</p>
+          <div className='description'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            corporis.
+          </div>
 
           <motion.div
             variants={{
@@ -95,9 +103,9 @@ const Hero = () => {
           >
             <Social fontSize='.95rem' padding='.3rem 1.25rem' width='auto' />
           </motion.div>
-        </StyledContentWrapper>
-      </StyledSection>
-    </motion.div>
+        </motion.div>
+      </StyledContentWrapper>
+    </StyledSection>
   );
 };
 
