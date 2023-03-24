@@ -12,18 +12,18 @@ import Sidebar from './sidebar';
 import Navbar from './navbar';
 
 const StyledHeader = styled(motion.header)`
-  width: 100%;
+  /* width: 100%;
   height: ${({ theme }) => theme.headerHeight};
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.background}; */
 `;
 
 const StyledContentWrapper = styled(ContentWrapper)`
   && {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
   }
 `;
 
@@ -46,7 +46,7 @@ const StyledBurger = styled.button`
     display: none;
   }
   div {
-    width: 2rem;
+    /* width: 2rem;
     height: 0.25rem;
     background: ${({ theme }) => theme.colors.primary};
     border-radius: 0.625rem;
@@ -62,7 +62,7 @@ const StyledBurger = styled.button`
     }
     :nth-child(3) {
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
-    }
+    } */
   }
 `;
 
@@ -104,7 +104,7 @@ const Header = () => {
           <div />
           <div />
         </StyledBurger>
-        <Sidebar id='sidebar' open={open} setOpen={setOpen} />
+        {/* <Sidebar id='sidebar' open={open} setOpen={setOpen} /> */}
       </>
     );
   } else {

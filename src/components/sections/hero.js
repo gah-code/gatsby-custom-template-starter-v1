@@ -73,18 +73,13 @@ const Hero = ({ content }) => {
   };
 
   const item = {
-    hidden: { opacity: 0, x: -150 },
+    hidden: { opacity: 0 },
     visible: { opacity: 1, x: 0 },
   };
   return (
     <StyledSection id='hero'>
       <StyledContentWrapper>
-        <motion.div
-          initial='hidden'
-          animate='visible'
-          variants={HeroItems}
-          style={{ width: '100%' }}
-        >
+        <motion.div initial='hidden' animate='visible' variants={HeroItems}>
           <h1 className='title'>
             Hello
             <div className='greetings'>I'm Gilbert Haro</div>
