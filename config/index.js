@@ -27,7 +27,7 @@ module.exports = {
     },
     darkTheme: {
       primary: '#f9f4e3',
-      secondary: '#2A2926',
+      secondary: '#2618',
       tertiary: '#252525',
       text: '#f9f4e3',
       subtext: '#AAAAAA',
@@ -65,7 +65,7 @@ module.exports = {
     },
     {
       name: 'Mail',
-      url: 'mailto:mail@konstantin.digital',
+      url: 'mailto:mail@gilbertharocode@gmail.com',
     },
   ],
 
