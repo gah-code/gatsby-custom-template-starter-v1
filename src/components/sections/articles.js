@@ -72,6 +72,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       justify-content: center;
       padding: 1rem;
       margin: 2rem 1rem;
+
       box-shadow: 0 5px 15px ${({ theme }) => theme.colors.boxShadow};
       border-radius: ${({ theme }) => theme.borderRadius};
       background: ${({ theme }) => theme.colors.card};
@@ -85,6 +86,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
         margin: 2rem 2.5rem 2rem 0;
       }
+
       .category {
         color: ${({ theme }) => theme.colors.primary};
         text-transform: uppercase;
