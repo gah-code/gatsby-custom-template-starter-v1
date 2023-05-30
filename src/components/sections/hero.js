@@ -1,9 +1,7 @@
-import React, { useEffect, useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import ContentWrapper from '../../styles/contentWrapper';
 import { motion } from 'framer-motion';
-
-import Context from '../../context/';
+import ContentWrapper from '../../styles/contentWrapper';
 import Underlining from '../../styles/underlining';
 import Social from '../social';
 
@@ -14,80 +12,83 @@ const StyledSection = styled.section`
 `;
 
 const StyledContentWrapper = styled(ContentWrapper)`
-  && {
-    width: 100%;
-    height: 100%;
-    min-height: 60vh;
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-bottom: 4rem;
+  }
+
+  .greetings {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 6rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .emoji {
+    margin-left: 0.75rem;
+    width: 2.2rem;
+    height: 2.2rem;
+
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-      margin-bottom: 4rem;
+      margin-left: 1rem;
+      width: 3rem;
+      height: 3rem;
     }
-    .greetings {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      margin-bottom: 0;
     }
-    .emoji {
-      margin-left: 0.75rem;
-      width: 2.2rem;
-      height: 2.2rem;
-      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        margin-left: 1rem;
-        width: 3rem;
-        height: 3rem;
-      }
-    }
-    .title {
-      margin-bottom: 1.5rem;
-      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        margin-bottom: 0;
-      }
-    }
-    .subtitle {
-      margin-top: -0.75rem;
-    }
-    .description {
-      font-size: 1.125rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
+  }
+
+  .subtitle {
+    margin-top: -0.75rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 `;
 
-// const AnimatedUnderlining = motion.custom(Underlining);
-
 const Hero = ({ content }) => {
-  const HeroItems = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 1,
-        staggerChildren: 0.3,
-        type: 'tween',
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, x: 0 },
-  };
   return (
     <StyledSection id='hero'>
       <StyledContentWrapper>
-        <motion.div initial='hidden' animate='visible' variants={HeroItems}>
+        <motion.div
+          initial='hidden'
+          animate='visible'
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delayChildren: 1,
+                staggerChildren: 0.3,
+                type: 'tween',
+              },
+            },
+          }}
+        >
           <h1 className='title'>
             Hello
             <div className='greetings'>I'm Gilbert Haro</div>
           </h1>
-          <h2 className='subtitle'>sub title</h2>
+          <h2 className='subtitle'>Sub Title</h2>
           <div className='description'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-            corporis.
+            I've been tinkering with computers since I was young. From playing
+            Roller Coaster Tycoon to using MySpace and YouTube, I've always been
+            fascinated by the way computer interactions made us feel.
           </div>
 
           <motion.div
