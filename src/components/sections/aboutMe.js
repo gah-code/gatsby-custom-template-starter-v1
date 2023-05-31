@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
 
 // Wrapper for the entire "About Me" section
 const AboutWrapper = styled.section`
@@ -43,16 +44,25 @@ const Button = styled.a`
 `;
 
 const AboutMe = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          about
+          aboutDescription
+        }
+      }
+    }
+  `);
+
+  const { title, about, aboutDescription } = data.site.siteMetadata;
+
   return (
     <AboutWrapper>
       <ContentContainer>
-        <SectionHeading>About Me</SectionHeading>
-        <SectionParagraph>
-          Hi, I'm Tania, a web developer with a passion for creating beautiful
-          and user-friendly websites. I have experience in both front-end and
-          back-end development, and I love turning ideas into reality through
-          coding.
-        </SectionParagraph>
+        <SectionHeading>{about}</SectionHeading>
+        <SectionParagraph>{aboutDescription}</SectionParagraph>
         <SectionParagraph>
           In my free time, I enjoy writing technical articles on my blog,
           exploring new technologies, and contributing to open-source projects.

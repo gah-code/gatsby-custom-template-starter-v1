@@ -4,6 +4,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+// import AboutMe from '../sections/aboutMe';
+// import { graphql, useStaticQuery } from 'gatsby';
 
 import ContentWrapper from '../styles/contentWrapper';
 
@@ -37,6 +39,7 @@ const ___Section___ = ({ content }) => {
       <StyledContentWrapper>
         <h3>___SectionTitle___</h3>
         {/* ____SectionContent____ */}
+        {/* <AboutMe content={sectionDetails} /> */}
       </StyledContentWrapper>
     </StyledSection>
   );

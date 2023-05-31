@@ -10,6 +10,9 @@ module.exports = {
   seoTitleSuffix: 'Gilberts Gatsby Theme', // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
   useCookieBar: false, // If you use Google Analytics and want to be GDPR-compliant, set it to true
   googleAnalyticsTrackingId: '', // e.g. UA-XXXXXX-X
+  aboutTitle: 'About Me',
+  aboutDescription:
+    'Currently I work as a marketing web developer for Robert Half,a global staffing firm that specializes in placing professionals in a variety of fields, including accounting, finance, and technology.',
 
   // -- THEME SETTINGS -----
   colors: {

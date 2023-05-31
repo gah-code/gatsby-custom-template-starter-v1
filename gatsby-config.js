@@ -11,6 +11,8 @@
 const {
   author,
   siteTitle,
+  aboutTitle,
+  aboutDescription,
   siteShortTitle,
   siteDescription,
   siteIcon,
@@ -23,6 +25,8 @@ module.exports = {
   siteMetadata: {
     author: author,
     title: siteTitle,
+    about: aboutTitle,
+    aboutDescription: aboutDescription,
     description: siteDescription,
     siteUrl: siteUrl,
   },
