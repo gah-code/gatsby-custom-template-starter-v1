@@ -3,10 +3,51 @@ import styled from 'styled-components';
 import StyledTag from '../StyledTag';
 
 const CenteredContainer = styled.div`
-  display: flex;
+  /* display: grid; */
   justify-content: center;
+  /* grid-template-columns: 1fr 1fr; */
   background-color: #dff8;
   padding: 2rem 0;
+
+  .flex-grid-wrap {
+    padding: 2rem;
+  }
+
+  .flex-grid {
+    display: flex;
+
+    & > * {
+      flex: 0 1 100%;
+
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+
+    @media (max-width: (12rem * 3)) {
+      flex-wrap: wrap;
+
+      & > * {
+        margin: 2rem 0 0 !important;
+      }
+    }
+
+    @media (min-width: (12rem * 3)) {
+      & + .flex-grid {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .subtitle {
+    margin-top: -0.75rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const ProjectsWrapper = styled.section`
@@ -16,7 +57,7 @@ const ProjectsWrapper = styled.section`
 const ContentContainer = styled.div`
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
 `;
 
 const SectionHeading = styled.h2`
@@ -31,41 +72,30 @@ const ProjectList = styled.ul`
 `;
 
 const ProjectItem = styled.li`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 1.8rem;
+  align-items: flex-start; */
+  margin-bottom: 2.5rem;
   background-color: #f3333;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   /* margin-bottom: 24px; */
-
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* column-gap: 24px; */
-  }
-
-  /* @media (min-width: 1024px) {
-    flex-direction: column;
-    align-items: flex-start;
-  } */
 `;
 
 const ProjectTitle = styled.h2`
   font-size: 1.5rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+
+  margin-bottom: 0.8rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin-bottom: 0;
+  }
 `;
 
 const ProjectDescription = styled.p`
   font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  margin: 0.5rem 0 1.5rem 0;
 
   @media (max-width: 480px) {
     font-size: 0.875rem;
@@ -101,11 +131,10 @@ const projects = [
 
 const ProjectsSection = ({ projects }) => {
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper className='grid-flex-wrap'>
       <ContentContainer>
         <SectionHeading>Projects</SectionHeading>
-
-        <ProjectList>
+        <ProjectList className='flex-grid'>
           {projects.map((project) => (
             <ProjectItem key={project.id}>
               <ProjectTitle>{project.title}</ProjectTitle>
@@ -114,6 +143,7 @@ const ProjectsSection = ({ projects }) => {
             </ProjectItem>
           ))}
         </ProjectList>
+
         <StyledTag />
       </ContentContainer>
     </ProjectsWrapper>

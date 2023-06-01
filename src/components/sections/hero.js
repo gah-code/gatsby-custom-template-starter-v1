@@ -43,7 +43,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 
   .title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
 
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
       margin-bottom: 0;
