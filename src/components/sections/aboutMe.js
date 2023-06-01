@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
-
+import Btn from '../Btn';
+import Tags from '../tags';
+import StyledTag from '../StyledTag';
 // Wrapper for the entire "About Me" section
 const AboutWrapper = styled.section`
   /* background-color: #f8f8f8; */
@@ -69,7 +71,11 @@ const AboutMe = () => {
           I believe in continuous learning and staying up-to-date with the
           latest trends and best practices in web development.
         </SectionParagraph>
+        <Btn />
         <Button href='/portfolio'>View Portfolio</Button>
+        <a>test</a>
+        <Tags />
+        <StyledTag />
       </ContentContainer>
     </AboutWrapper>
   );

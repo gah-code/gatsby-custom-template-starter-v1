@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import StyledTag from '../StyledTag';
 
 const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
   background-color: #dff8;
-  padding: 3rem 0;
+  padding: 2rem 0;
 `;
 
 const ProjectsWrapper = styled.section`
-  padding: 3rem 0;
+  padding: 5rem 0;
 `;
 
 const ContentContainer = styled.div`
@@ -20,7 +21,7 @@ const ContentContainer = styled.div`
 
 const SectionHeading = styled.h2`
   font-size: 2.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 3.5rem;
 `;
 
 const ProjectList = styled.ul`
@@ -34,23 +35,28 @@ const ProjectItem = styled.li`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 1.8rem;
+  background-color: #f3333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  /* margin-bottom: 24px; */
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* column-gap: 24px; */
   }
 
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
     flex-direction: column;
     align-items: flex-start;
-  }
+  } */
 `;
 
-const ProjectTitle = styled.h3`
+const ProjectTitle = styled.h2`
   font-size: 1.5rem;
   margin-right: 1rem;
-  margin-bottom: 1.2rem;
-  margin-top: 3rem;
+  margin-bottom: 1rem;
 `;
 
 const ProjectDescription = styled.p`
@@ -98,6 +104,7 @@ const ProjectsSection = ({ projects }) => {
     <ProjectsWrapper>
       <ContentContainer>
         <SectionHeading>Projects</SectionHeading>
+
         <ProjectList>
           {projects.map((project) => (
             <ProjectItem key={project.id}>
@@ -107,6 +114,7 @@ const ProjectsSection = ({ projects }) => {
             </ProjectItem>
           ))}
         </ProjectList>
+        <StyledTag />
       </ContentContainer>
     </ProjectsWrapper>
   );

@@ -72,6 +72,22 @@ module.exports = {
     },
   ],
 
+  tags: [
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/gilbert-haro-2b108222b/',
+    },
+
+    {
+      name: 'Github',
+      url: 'https://github.com/gah-code',
+    },
+    {
+      name: 'Mail',
+      url: 'mailto:mail@gilbertharocode@gmail.com',
+    },
+  ],
+
   //-- NAVIGATION SETTINGS -----
   navLinks: {
     menu: [
