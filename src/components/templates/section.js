@@ -37,7 +37,7 @@ const ___Section___ = ({ content }) => {
   return (
     <StyledSection id='___SectionHashId___'>
       <StyledContentWrapper>
-        <h3>___SectionTitle___</h3>
+        {/* <h3>___SectionTitle___</h3> */}
         {/* ____SectionContent____ */}
         {/* <AboutMe content={sectionDetails} /> */}
       </StyledContentWrapper>

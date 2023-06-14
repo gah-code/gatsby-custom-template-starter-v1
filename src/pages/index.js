@@ -4,7 +4,7 @@ import Hero from '../components/sections/hero';
 import Articles from '../components/sections/articles';
 import AboutMe from '../components/sections/aboutMe';
 import CardSlider from '../components/CardSlider';
-import TwoColumnGrid from '../components/TwoColumnGrid';
+import Grid from '../components/Grid';
 import Projects from '../components/sections/projects';
 import Social from '../components/social';
 import Author from '../components/sections/author';
@@ -19,13 +19,12 @@ const IndexPage = ({ data }) => {
       {/* <Articles /> */}
       {/* <Projects /> */}
       <AboutMe />
-      {/* <Social /> */}
-
-      <TwoColumnGrid
-        imageSrc='path/to/image.jpg'
+      <Grid
+        imageSrc='me.jpg'
         heading='Header Text'
         paragraph='Currently, I work as a marketing web developer for Robert Half, a global staffing firm that specializes in placing professionals in a variety of fields, including accounting, finance, and technology.'
         buttonText='Button Text'
+        layout='1fr 1fr 1fr' // Specify the desired column layout here
       />
     </Layout>
   );

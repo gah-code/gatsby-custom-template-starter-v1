@@ -76,12 +76,7 @@ const Author = () => {
       <ContentContainer>
         <SectionHeading>{about}</SectionHeading>
         <SectionParagraph>{aboutDescription}</SectionParagraph>
-        <SectionParagraph>
-          In my free time, I enjoy writing technical articles on my blog,
-          exploring new technologies, and contributing to open-source projects.
-          I believe in continuous learning and staying up-to-date with the
-          latest trends and best practices in web development.
-        </SectionParagraph>
+        <SectionParagraph>Author</SectionParagraph>
       </ContentContainer>
     </AboutWrapper>
   );

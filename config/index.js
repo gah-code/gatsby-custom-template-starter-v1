@@ -13,6 +13,7 @@ module.exports = {
   aboutTitle: 'About Me',
   aboutDescription:
     'Currently I work as a marketing web developer for Robert Half,a global staffing firm that specializes in placing professionals in a variety of fields, including accounting, finance, and technology.',
+  imageSrc: '../src/images/me.jpg',
 
   // -- THEME SETTINGS -----
   colors: {

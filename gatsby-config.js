@@ -19,6 +19,7 @@ const {
   siteUrl,
   googleAnalyticsTrackingId,
   colors,
+  imageSrc,
 } = require(`./config`);
 
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
     aboutDescription: aboutDescription,
     description: siteDescription,
     siteUrl: siteUrl,
+    imageSrc: imageSrc,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
