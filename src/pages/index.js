@@ -7,6 +7,7 @@ import CardSlider from '../components/CardSlider';
 import TwoColumnGrid from '../components/TwoColumnGrid';
 import Projects from '../components/sections/projects';
 import Social from '../components/social';
+import Author from '../components/sections/author';
 // import ProjectsSection from '../components/ProjectsSection';
 
 const IndexPage = ({ data }) => {
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero />
       <CardSlider />
+      <Author />
       {/* <Articles /> */}
       {/* <Projects /> */}
       <AboutMe />

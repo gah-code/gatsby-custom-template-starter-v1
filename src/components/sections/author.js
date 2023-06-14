@@ -2,13 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import ContentWrapper from '../../styles/contentWrapper';
 import { graphql, useStaticQuery } from 'gatsby';
-import Btn from '../Btn';
-import Tags from '../tags';
-import StyledTag from '../StyledTag';
-import Social from '../social';
+
 // Wrapper for the entire "About Me" section
 const AboutWrapper = styled.section`
-  /* background-color: #f8f8f8; */
   width: 100%;
   padding: 3rem 0;
 `;
@@ -60,7 +56,7 @@ const Button = styled.a`
   }
 `;
 
-const AboutMe = () => {
+const Author = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -86,15 +82,9 @@ const AboutMe = () => {
           I believe in continuous learning and staying up-to-date with the
           latest trends and best practices in web development.
         </SectionParagraph>
-        <Social fontSize='.95rem' padding='.3rem 1.25rem' width='auto' />
-        {/* <Btn /> */}
-        {/* <Button href='/portfolio'>View Portfolio</Button> */}
-        {/* <a>test</a> */}
-        {/* <Tags /> */}
-        {/* <StyledTag /> */}
       </ContentContainer>
     </AboutWrapper>
   );
 };
 
-export default AboutMe;
+export default Author;
