@@ -16,7 +16,7 @@ const GridContainer = styled(ContentWrapper)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: 0 1.5rem;
-    background-color: red;
+    background-color: grey;
     grid-template-columns: 1.2fr 1fr;
   }
 

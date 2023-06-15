@@ -14,11 +14,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero />
-      <CardSlider />
       <Author />
-      {/* <Articles /> */}
-      {/* <Projects /> */}
-      <AboutMe />
       <Grid
         imageSrc='me.jpg'
         heading='Header Text'
@@ -26,6 +22,11 @@ const IndexPage = ({ data }) => {
         buttonText='Button Text'
         layout='1fr 1fr 1fr' // Specify the desired column layout here
       />
+      <CardSlider />
+
+      {/* <Articles /> */}
+      {/* <Projects /> */}
+      {/* <AboutMe /> */}
     </Layout>
   );
 };

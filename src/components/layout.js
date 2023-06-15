@@ -5,9 +5,9 @@ import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from '../styles/theme';
 // import { useDarkMode } from '../hooks';
 import Context from '../context';
-
+import NavBar from './navbar';
 import GlobalStyle from '../styles/globalStyle';
-import Header from '../components/header';
+// import Header from '../components/header';
 // import CookieBar from '../components/cookieBar';
 import SplashScreen from '../components/splashScreen';
 
@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
     <StyledLayoutWrapper id='layout-wrapper'>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-
-        <Header />
+        <NavBar />
+        {/* <Header /> */}
         <main id='main-content'>{children}</main>
         {/* <Footer /> */}
       </ThemeProvider>
