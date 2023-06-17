@@ -1,14 +1,11 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from '../styles/theme';
-// import { useDarkMode } from '../hooks';
-import Context from '../context';
+// import Context from '../context';
 import NavBar from './navbar';
 import GlobalStyle from '../styles/globalStyle';
-// import Header from '../components/header';
-// import CookieBar from '../components/cookieBar';
+
 import SplashScreen from '../components/splashScreen';
 
 import { useCookieBar } from '../../config';
@@ -23,13 +20,13 @@ const StyledLayoutWrapper = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const { isIntroDone } = useContext(Context);
   const theme = darkTheme;
   return (
     <StyledLayoutWrapper id='layout-wrapper'>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
         <NavBar />
+        <GlobalStyle />
+
         {/* <Header /> */}
         <main id='main-content'>{children}</main>
         {/* <Footer /> */}

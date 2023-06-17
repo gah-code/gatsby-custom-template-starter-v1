@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { FiAlignJustify } from 'react-icons/fi';
 
 import styled from 'styled-components';
 
@@ -13,11 +14,11 @@ const Navbar = styled.nav`
 
 const NavCenter = styled.div`
   width: 90vw;
-  max-width: var(--max-width);
+  max-width: 1120px;
 `;
 
 const NavHeader = styled.div`
-  height: 6rem;
+  height: 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +35,10 @@ const NavBtn = styled.button`
 
   svg {
     font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: none;
   }
 `;
 
@@ -106,7 +111,7 @@ const NavBar = () => {
             {/* <NavLogo src={logo} alt='simply recipes' /> */}
           </Link>
           <NavBtn onClick={() => setShow(!show)}>
-            {/* <FiAlignJustify /> */}icons
+            <FiAlignJustify />
           </NavBtn>
         </NavHeader>
         <NavLinks className={show ? 'show-links' : ''}>
