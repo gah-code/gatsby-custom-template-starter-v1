@@ -124,7 +124,7 @@ const StyledSocialProfile = styled.a`
 `;
 
 const Tags = ({ width, padding, fontSize, fontWeight, withIcon }) => {
-  // const { darkMode } = useContext(Context).state;
+  const { darkMode } = useContext(Context).state;
 
   return (
     <StyledSocialWrapper itemCount={tags.length}>

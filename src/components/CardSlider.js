@@ -4,6 +4,7 @@ import Underlining from '../styles/underlining';
 import Card from './Card';
 
 const SliderContainer = styled.div`
+  /* width: 100%; */
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;

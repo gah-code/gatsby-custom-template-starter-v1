@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { darkTheme } from '../styles/theme';
+
+// import { darkTheme } from '../styles/theme';
+import { lightTheme, darkTheme } from '../styles/theme';
+import { useDarkMode } from '../hooks';
 // import Context from '../context';
 import NavBar from './navbar';
 import GlobalStyle from '../styles/globalStyle';
+import Header from './header';
 
 import SplashScreen from '../components/splashScreen';
 
@@ -20,14 +24,18 @@ const StyledLayoutWrapper = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const theme = darkTheme;
+  // const theme = darkTheme;
+  // Enables dark mode if the user's OS has an active dark theme
+  const darkModeEnabled = useDarkMode();
+  const theme = darkModeEnabled ? darkTheme : lightTheme;
   return (
     <StyledLayoutWrapper id='layout-wrapper'>
       <ThemeProvider theme={theme}>
-        <NavBar />
         <GlobalStyle />
+        <Header />
 
-        {/* <Header /> */}
+        {/* <NavBar /> */}
+
         <main id='main-content'>{children}</main>
         {/* <Footer /> */}
       </ThemeProvider>

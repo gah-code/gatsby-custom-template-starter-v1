@@ -76,7 +76,7 @@ const ProjectItem = styled.li`
   flex-direction: column;
   align-items: flex-start; */
   margin-bottom: 2.5rem;
-  background-color: #f3333;
+  background-color: f3333;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
