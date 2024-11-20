@@ -10,9 +10,9 @@ module.exports = {
   seoTitleSuffix: 'Gilberts Gatsby Theme', // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
   useCookieBar: false, // If you use Google Analytics and want to be GDPR-compliant, set it to true
   googleAnalyticsTrackingId: '', // e.g. UA-XXXXXX-X
-  aboutTitle: 'About Me',
+  aboutTitle: 'About',
   aboutDescription:
-    'Currently I work as a marketing web developer for Robert Half,a global staffing firm that specializes in placing professionals in a variety of fields, including accounting, finance, and technology.',
+    'Just soaking up the sun in San Jose, California! Im sharing life with my amazing girlfriend and our cute pup, 🌯. During the week, Im all in as a full-time web developer at Robert Half, every day is a crazy mix of work, learning, cooking, and getting my step count in. On the weekends, we relax with friends, go plant shopping, and sometimes I have photography bookings or editing to catch up on. We enjoy delicious food and great views around the Bay area.',
   imageSrc: '../src/images/me.jpg',
 
   // -- THEME SETTINGS -----
@@ -94,7 +94,7 @@ module.exports = {
     menu: [
       {
         name: 'About Me',
-        url: '/#about',
+        url: '/about',
       },
       {
         name: 'Features',

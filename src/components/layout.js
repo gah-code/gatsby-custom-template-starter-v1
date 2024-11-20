@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-
-// import { darkTheme } from '../styles/theme';
 import { lightTheme, darkTheme } from '../styles/theme';
 import { useDarkMode } from '../hooks';
-// import Context from '../context';
-import NavBar from './navbar';
+import Context from '../context';
 import GlobalStyle from '../styles/globalStyle';
 import Header from './header';
 
@@ -33,8 +30,6 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header />
-
-        {/* <NavBar /> */}
 
         <main id='main-content'>{children}</main>
         {/* <Footer /> */}

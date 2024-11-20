@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ContentWrapper from '../../styles/contentWrapper';
 import { graphql, useStaticQuery } from 'gatsby';
+
 import Btn from '../Btn';
 import Tags from '../tags';
 import StyledTag from '../StyledTag';
